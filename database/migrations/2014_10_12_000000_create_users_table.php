@@ -1,5 +1,3 @@
-//created with php artisan make:model User --migration
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,14 +11,17 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+
+     //added first name, last name, and auto increment id to schema
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->increments('id');   //autoincrement id field
+            $table->string('first_name');   //string field
+            $table->string('last_name');   //string field
+            $table->string('email')->unique();   //unique string field
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password');   //string field
             $table->rememberToken();
             $table->timestamps();
         });
