@@ -1,3 +1,5 @@
+//created with php artisan make:model User --migration
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
