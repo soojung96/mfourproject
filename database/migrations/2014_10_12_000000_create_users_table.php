@@ -19,10 +19,10 @@ class CreateUsersTable extends Migration
             $table->increments('id');   //autoincrement id field
             $table->string('first_name');   //string field
             $table->string('last_name');   //string field
-            $table->string('email')->unique();   //unique string field
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');   //string field
-            $table->rememberToken();
+            $table->string('email');   // string field
+            // $table->timestamp('email_verified_at')->nullable();
+            // $table->string('password');   //string field
+            // $table->rememberToken();
             $table->timestamps();
         });
     }
